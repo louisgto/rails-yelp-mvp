@@ -1,0 +1,8 @@
+<%= simple_form_for (restaurant) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= link_to "Retour à la liste des restaurants", restaurants_path %>
+<% end %>
